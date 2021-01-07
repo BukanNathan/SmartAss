@@ -88,7 +88,7 @@
         android:layout_height="47dp"
         android:text="Buy"
         tools:layout_editor_absoluteX="220dp"
-        tools:layout_editor_absoluteY="775dp" />
+        tools:layout_editor_absoluteY="675dp" />
 
     <Button
         android:id="@+id/button2"
@@ -97,7 +97,7 @@
         android:text="Add Payment Method"
         android:textSize="10dp"
         tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="775dp" />
+        tools:layout_editor_absoluteY="675dp" />
 
     <TextView
         android:id="@+id/textView3"
