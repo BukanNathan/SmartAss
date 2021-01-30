@@ -1,12 +1,8 @@
-package com.example.clinic
+package testing
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageView
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
+import com.example.clinic.R
 import com.google.android.gms.maps.MapView
 
 class MainActivity : AppCompatActivity() {
