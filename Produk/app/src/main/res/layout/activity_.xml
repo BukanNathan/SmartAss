@@ -12,8 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:background="@drawable/bg">
-        <ImageButton
-            android:id="@+id/imageButton2"
+        <ImageView
+            android:id="@+id/ImageView2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -92,7 +92,39 @@
         android:layout_below="@id/carousel"
         android:textColor="#FF0000"
         android:textSize="25dp"
+        android:clickable="true"
         android:textStyle="bold" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:clickable="true"
+        android:layout_below="@id/txtsale">
+        <Button
+            android:id="@+id/sale1"
+            android:layout_width="100dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="@color/white"/>
+        <Button
+            android:id="@+id/sale2"
+            android:layout_width="100dp"
+            android:layout_height="110dp"
+            android:layout_toRightOf="@id/sale1"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="30dp"
+            android:backgroundTint="@color/white"/>
+        <Button
+            android:id="@+id/sale3"
+            android:layout_width="120dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/sale2"
+            android:backgroundTint="@color/white"/>
+    </RelativeLayout>
+
     <LinearLayout
         android:id="@+id/section2"
         android:layout_width="match_parent"
@@ -104,29 +136,28 @@
         android:background="@drawable/bg3">
 
         <ImageView
-            android:id="@+id/sale1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/food" />
+            android:clickable="true"
+            android:background="@drawable/food"/>
 
         <ImageView
-            android:id="@+id/sale2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            app:srcCompat="@drawable/necklace"
-             />
+            android:clickable="true"
+            app:srcCompat="@drawable/necklace" />
 
         <ImageView
-            android:id="@+id/sale3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:layout_weight="1"
+            android:clickable="true"
             app:srcCompat="@drawable/bowl" />
     </LinearLayout>
     <TextView
@@ -139,7 +170,37 @@
         android:text="Popular Now"
         android:textColor="#FCAE1E"
         android:textSize="25dp"
+        android:clickable="true"
         android:textStyle="bold" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@id/txtpop">
+        <Button
+            android:id="@+id/pop1"
+            android:layout_width="100dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="@color/white"/>
+        <Button
+            android:id="@+id/pop2"
+            android:layout_width="100dp"
+            android:layout_height="110dp"
+            android:layout_toRightOf="@id/pop1"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="30dp"
+            android:backgroundTint="@color/white"/>
+        <Button
+            android:id="@+id/pop3"
+            android:layout_width="120dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/pop2"
+            android:backgroundTint="@color/white"/>
+    </RelativeLayout>
     <LinearLayout
         android:id="@+id/section3"
         android:layout_width="match_parent"
@@ -148,32 +209,32 @@
         android:orientation="horizontal"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
+        android:clickable="true"
         android:background="@drawable/bg3">
 
         <ImageView
-            android:id="@+id/pop1"
             android:layout_width="0dp"
             android:layout_height="110dp"
             android:layout_weight="1"
             android:layout_margin="3dp"
-            app:srcCompat="@drawable/food"
-             />
+            android:clickable="true"
+            app:srcCompat="@drawable/food" />
         <ImageView
-            android:id="@+id/pop2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_margin="3dp"
+            android:clickable="true"
             app:srcCompat="@drawable/necklace" />
 
         <ImageView
-            android:id="@+id/pop3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_margin="3dp"
+            android:clickable="true"
             app:srcCompat="@drawable/bowl" />
     </LinearLayout>
     <View
