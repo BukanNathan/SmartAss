@@ -1,0 +1,2 @@
+com/example/mapsearch/BuildConfig.java
+ com.example.mapsearch.BuildConfig

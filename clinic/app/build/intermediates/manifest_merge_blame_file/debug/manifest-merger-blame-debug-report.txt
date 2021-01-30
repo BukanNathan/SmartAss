@@ -1,0 +1,98 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.mapsearch"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->D:\AndroidStudioProjects\MapSearch\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->D:\AndroidStudioProjects\MapSearch\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+11-->D:\AndroidStudioProjects\MapSearch\app\src\main\AndroidManifest.xml:5:5-78
+11-->D:\AndroidStudioProjects\MapSearch\app\src\main\AndroidManifest.xml:5:22-76
+12    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+12-->D:\AndroidStudioProjects\MapSearch\app\src\main\AndroidManifest.xml:6:5-80
+12-->D:\AndroidStudioProjects\MapSearch\app\src\main\AndroidManifest.xml:6:22-78
+13    <uses-permission android:name="android.permission.INTERNET" />
+13-->D:\AndroidStudioProjects\MapSearch\app\src\main\AndroidManifest.xml:7:5-66
+13-->D:\AndroidStudioProjects\MapSearch\app\src\main\AndroidManifest.xml:7:22-64
+14
+15    <!-- Include required permissions for Google Maps API to run. -->
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\ferdi\.gradle\caches\transforms-2\files-2.1\ded668fd95b505b1f809aa24733e053c\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
+16-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\ferdi\.gradle\caches\transforms-2\files-2.1\ded668fd95b505b1f809aa24733e053c\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:22-76
+17
+18    <uses-feature
+18-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\ferdi\.gradle\caches\transforms-2\files-2.1\ded668fd95b505b1f809aa24733e053c\jetified-play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
+19        android:glEsVersion="0x00020000"
+19-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\ferdi\.gradle\caches\transforms-2\files-2.1\ded668fd95b505b1f809aa24733e053c\jetified-play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
+20        android:required="true" />
+20-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\ferdi\.gradle\caches\transforms-2\files-2.1\ded668fd95b505b1f809aa24733e053c\jetified-play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
+21
+22    <application
+22-->D:\AndroidStudioProjects\MapSearch\app\src\main\AndroidManifest.xml:9:5-27:19
+23        android:allowBackup="true"
+23-->D:\AndroidStudioProjects\MapSearch\app\src\main\AndroidManifest.xml:10:9-35
+24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+24-->[androidx.core:core:1.3.2] C:\Users\ferdi\.gradle\caches\transforms-2\files-2.1\79ee559483d346866425453a88a27286\core-1.3.2\AndroidManifest.xml:24:18-86
+25        android:debuggable="true"
+26        android:icon="@mipmap/ic_launcher"
+26-->D:\AndroidStudioProjects\MapSearch\app\src\main\AndroidManifest.xml:11:9-43
+27        android:label="@string/app_name"
+27-->D:\AndroidStudioProjects\MapSearch\app\src\main\AndroidManifest.xml:12:9-41
+28        android:roundIcon="@mipmap/ic_launcher_round"
+28-->D:\AndroidStudioProjects\MapSearch\app\src\main\AndroidManifest.xml:13:9-54
+29        android:supportsRtl="true"
+29-->D:\AndroidStudioProjects\MapSearch\app\src\main\AndroidManifest.xml:14:9-35
+30        android:testOnly="true"
+31        android:theme="@style/AppTheme" >
+31-->D:\AndroidStudioProjects\MapSearch\app\src\main\AndroidManifest.xml:15:9-40
+32        <meta-data
+32-->D:\AndroidStudioProjects\MapSearch\app\src\main\AndroidManifest.xml:17:9-122
+33            android:name="com.google.android.gms.version"
+33-->D:\AndroidStudioProjects\MapSearch\app\src\main\AndroidManifest.xml:17:20-65
+34            android:value="@integer/google_play_services_version" />
+34-->D:\AndroidStudioProjects\MapSearch\app\src\main\AndroidManifest.xml:17:66-119
+35        <meta-data
+35-->D:\AndroidStudioProjects\MapSearch\app\src\main\AndroidManifest.xml:18:9-99
+36            android:name="com.google.android.geo.API_KEY"
+36-->D:\AndroidStudioProjects\MapSearch\app\src\main\AndroidManifest.xml:18:20-65
+37            android:value="@string/map_key" />
+37-->D:\AndroidStudioProjects\MapSearch\app\src\main\AndroidManifest.xml:18:66-97
+38
+39        <activity android:name="com.example.mapsearch.MainActivity" >
+39-->D:\AndroidStudioProjects\MapSearch\app\src\main\AndroidManifest.xml:20:9-26:20
+39-->D:\AndroidStudioProjects\MapSearch\app\src\main\AndroidManifest.xml:20:19-47
+40            <intent-filter>
+40-->D:\AndroidStudioProjects\MapSearch\app\src\main\AndroidManifest.xml:21:13-25:29
+41                <action android:name="android.intent.action.MAIN" />
+41-->D:\AndroidStudioProjects\MapSearch\app\src\main\AndroidManifest.xml:22:17-69
+41-->D:\AndroidStudioProjects\MapSearch\app\src\main\AndroidManifest.xml:22:25-66
+42
+43                <category android:name="android.intent.category.LAUNCHER" />
+43-->D:\AndroidStudioProjects\MapSearch\app\src\main\AndroidManifest.xml:24:17-77
+43-->D:\AndroidStudioProjects\MapSearch\app\src\main\AndroidManifest.xml:24:27-74
+44            </intent-filter>
+45        </activity>
+46        <!-- Needs to be explicitly declared on P+ -->
+47        <uses-library
+47-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\ferdi\.gradle\caches\transforms-2\files-2.1\ded668fd95b505b1f809aa24733e053c\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
+48            android:name="org.apache.http.legacy"
+48-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\ferdi\.gradle\caches\transforms-2\files-2.1\ded668fd95b505b1f809aa24733e053c\jetified-play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
+49            android:required="false" />
+49-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\ferdi\.gradle\caches\transforms-2\files-2.1\ded668fd95b505b1f809aa24733e053c\jetified-play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
+50
+51        <activity
+51-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ferdi\.gradle\caches\transforms-2\files-2.1\6d064301158aa86007fb000de44842bf\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+52            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+52-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ferdi\.gradle\caches\transforms-2\files-2.1\6d064301158aa86007fb000de44842bf\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+53            android:exported="false"
+53-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ferdi\.gradle\caches\transforms-2\files-2.1\6d064301158aa86007fb000de44842bf\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+54            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+54-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\ferdi\.gradle\caches\transforms-2\files-2.1\6d064301158aa86007fb000de44842bf\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+55    </application>
+56
+57</manifest>

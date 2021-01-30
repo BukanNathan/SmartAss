@@ -1,0 +1,4 @@
+#Fri Jan 01 12:25:26 ICT 2021
+base.0=D\:\\AndroidStudioProjects\\MapSearch\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
