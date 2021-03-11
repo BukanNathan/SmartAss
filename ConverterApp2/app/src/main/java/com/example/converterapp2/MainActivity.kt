@@ -1,5 +1,6 @@
 package com.example.converterapp2
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
@@ -15,6 +16,9 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener {
             textView6.text = editTextNumber.text
             textView7.text = editTextNumber2.text
+
+            val intent1 = Intent(this, FileType::class.java)
+            startActivity(intent1)
         }
     }
 
