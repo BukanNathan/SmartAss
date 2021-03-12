@@ -10,7 +10,7 @@ class ShowFileType : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_show_file_type)
-
+        actionBar?.setDisplayHomeAsUpEnabled(true)
         var file: File? = intent.getParcelableExtra<File>(EXTRA_FILE)
         textView1.text = "File Type = ${file?.Type}, Extension = ${file?.Extension}"
     }
