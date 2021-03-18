@@ -41,4 +41,16 @@
         android:background="@drawable/roundedshape3"
         />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/convertion"
+        android:textAllCaps="false"
+        android:text="Convert a File"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="65dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resizePic"
+        android:background="@drawable/roundedshape"
+        />
+
 </RelativeLayout>
