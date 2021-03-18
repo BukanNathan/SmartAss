@@ -22,5 +22,9 @@ class MainActivity : AppCompatActivity() {
             val intentResizePic = Intent(this, ResizePic::class.java)
             startActivity(intentResizePic)
         }
+        convertion.setOnClickListener {
+            val intentConvert = Intent(this, ConvertFile::class.java)
+            startActivity(intentConvert)
+        }
     }
 }
