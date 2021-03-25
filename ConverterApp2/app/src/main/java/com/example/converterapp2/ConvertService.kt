@@ -10,6 +10,8 @@ import androidx.core.app.JobIntentService
 class ConvertService : JobIntentService() {
     override fun onHandleWork(intent: Intent) {
         var convertProgress = 0
+
+        //perulangan untuk menjalankan progress bar
         do {
             Thread.sleep(1000)
             convertProgress+=15
