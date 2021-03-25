@@ -5,7 +5,7 @@
     android:background="#FFFFFF"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".FileList">
 
     <TextView
         android:id="@+id/textView"
@@ -73,7 +73,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Max Size 12MB"
+        android:text="File Size 12MB"
         app:layout_constraintBottom_toBottomOf="@+id/button"
         app:layout_constraintEnd_toEndOf="@+id/button"
         app:layout_constraintHorizontal_bias="0.054"
@@ -91,6 +91,6 @@
         app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toTopOf="@+id/button"
         app:layout_constraintVertical_bias="0.478"
-        app:srcCompat="@android:drawable/ic_menu_add" />
+        app:srcCompat="@drawable/more_logo_ver"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
