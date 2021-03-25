@@ -34,6 +34,7 @@ class FragmentA : Fragment() {
         }
     }
 
+    //Inisialisasi interface data
     private lateinit var interfaceData : InterfaceData
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

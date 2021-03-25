@@ -1,5 +1,9 @@
 package com.example.converterapp2.fragments
 
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,7 +11,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.example.converterapp2.R
+import com.example.converterapp2.*
+import kotlinx.android.synthetic.main.fragment_b.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,6 +29,26 @@ class FragmentB : Fragment(){
     private var param1: String? = null
     private var param2: String? = null
 
+    val convertReceiver = object : BroadcastReceiver() {
+        override fun onReceive(context: Context?, intent: Intent?) {
+            var persen = intent?.getIntExtra(EXTRA_PERSEN, 0)
+            var finish = intent?.getBooleanExtra(EXTRA_FINISH, true)
+
+            val spinner1 = view?.findViewById<Spinner>(R.id.convert1)
+            val spinner2 = view?.findViewById<Spinner>(R.id.convert2)
+            val result = view?.findViewById<TextView>(R.id.result)
+
+            val type1 = spinner1?.selectedItem.toString()
+            val type2 = spinner2?.selectedItem.toString()
+            progressBar.progress = persen ?: 0
+            if (finish!!) {
+                spinner1!!.isEnabled = true
+                spinner2!!.isEnabled = true
+                Toast.makeText(requireContext(), "Finished!", Toast.LENGTH_SHORT).show()
+                result?.text = "Convert ${type1} to ${type2}"
+            }
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -32,6 +57,7 @@ class FragmentB : Fragment(){
         }
     }
 
+    //Inisialisasi var txt yang akan digunakan untuk menampung interface data
     var txt : String?= ""
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -67,15 +93,30 @@ class FragmentB : Fragment(){
         }
 
         val button = view.findViewById<Button>(R.id.button2)
-        val result = view.findViewById<TextView>(R.id.result)
+        val myService = Intent(requireContext(), ConvertService::class.java)
         button.setOnClickListener {
             if (spinner1.selectedItem.toString() == spinner2.selectedItem.toString()) {
                 Toast.makeText(requireContext(), "Same Type!", Toast.LENGTH_SHORT).show()
-            } else {
-                result.text = "Convert ${spinner1.selectedItem.toString()} to ${spinner2.selectedItem.toString()}"
+            }
+            else {
+                spinner1.isEnabled = false
+                spinner2.isEnabled = false
+                ConvertService.enqueueWork(requireContext(), myService)
             }
         }
+        val filterConvert = IntentFilter(ACTION_CONVERT)
+        requireActivity().registerReceiver(convertReceiver, filterConvert)
+
+        /*val button = view.findViewById<Button>(R.id.button2)
+        val result = view.findViewById<TextView>(R.id.result)
+        button.setOnClickListener {
+        }*/
         return view
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        requireActivity().unregisterReceiver(convertReceiver)
     }
 
     companion object {
