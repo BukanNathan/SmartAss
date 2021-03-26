@@ -34,16 +34,20 @@ class FragmentB : Fragment(){
             var persen = intent?.getIntExtra(EXTRA_PERSEN, 0)
             var finish = intent?.getBooleanExtra(EXTRA_FINISH, true)
 
+            //inisialisasi komponen yang digunakan
             val spinner1 = view?.findViewById<Spinner>(R.id.convert1)
             val spinner2 = view?.findViewById<Spinner>(R.id.convert2)
             val result = view?.findViewById<TextView>(R.id.result)
-
             val type1 = spinner1?.selectedItem.toString()
             val type2 = spinner2?.selectedItem.toString()
+
+            //operator Elvis, bernilai 0 jika false
             progressBar.progress = persen ?: 0
             if (finish!!) {
+                //aktifkan kembali spinner yang telah di-disable
                 spinner1!!.isEnabled = true
                 spinner2!!.isEnabled = true
+
                 Toast.makeText(requireContext(), "Finished!", Toast.LENGTH_SHORT).show()
                 result?.text = "Convert ${type1} to ${type2}"
             }
@@ -93,12 +97,14 @@ class FragmentB : Fragment(){
         }
 
         val button = view.findViewById<Button>(R.id.button2)
+        //dikarenakan fragment, perlu digunakan requireContext() dan requireActivity()
         val myService = Intent(requireContext(), ConvertService::class.java)
         button.setOnClickListener {
             if (spinner1.selectedItem.toString() == spinner2.selectedItem.toString()) {
                 Toast.makeText(requireContext(), "Same Type!", Toast.LENGTH_SHORT).show()
             }
             else {
+                //spinner di-disable saat button di click untuk mencegah perubahan data
                 spinner1.isEnabled = false
                 spinner2.isEnabled = false
                 ConvertService.enqueueWork(requireContext(), myService)
@@ -107,10 +113,6 @@ class FragmentB : Fragment(){
         val filterConvert = IntentFilter(ACTION_CONVERT)
         requireActivity().registerReceiver(convertReceiver, filterConvert)
 
-        /*val button = view.findViewById<Button>(R.id.button2)
-        val result = view.findViewById<TextView>(R.id.result)
-        button.setOnClickListener {
-        }*/
         return view
     }
 
