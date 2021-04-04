@@ -14,6 +14,7 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Toast
 import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationCompat.BADGE_ICON_SMALL
 import kotlinx.android.synthetic.main.activity_file_type.*
 
 const val EXTRA_FILE = "EXTRA_FILE"
@@ -83,6 +84,7 @@ class FileType : AppCompatActivity() {
                 .setContentText("File converted to ${editText1.text.toString()}")
                 .setSmallIcon(android.R.drawable.ic_dialog_info)
                 .setAutoCancel(true)
+                .setBadgeIconType(BADGE_ICON_SMALL)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setContentIntent(pendingIntent)
                 .addAction(action2)
@@ -96,6 +98,7 @@ class FileType : AppCompatActivity() {
             val importance = NotificationManager.IMPORTANCE_HIGH
             val channel = NotificationChannel(id,name,importance).apply {
                 description = channelDescription
+                setShowBadge(true)
             }
             notificationManager?.createNotificationChannel(channel)
         }
