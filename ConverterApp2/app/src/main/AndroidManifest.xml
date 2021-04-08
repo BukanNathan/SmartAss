@@ -15,11 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ConverterApp2">
 
-        <activity android:name=".NotificationActivity">
-        </activity>
-
         <receiver android:name=".NotificationReceiver" />
-
         <receiver
             android:name=".ConnectionReceiver"
             android:enabled="true">
@@ -58,11 +54,20 @@
         <activity
             android:name=".ResizePic"
             android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ConvertLink"/>
+        <activity
+            android:name=".NotificationActivity" />
 
         <service
             android:name=".ConvertService"
             android:exported="true"
             android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name=".YoutubeConvertMp3"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
     </application>
 
 </manifest>
