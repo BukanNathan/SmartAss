@@ -9,20 +9,19 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/chooseFile"
-        android:text="Choose File Type"
-        android:textAllCaps="false"
-        android:layout_marginLeft="65dp"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
         android:background="@drawable/roundedshape"
-        />
+        android:text="Choose File Type"
+        android:textAllCaps="false" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/fileList"
         android:textAllCaps="false"
         android:text="Transfer File"
         android:layout_marginTop="50dp"
-        android:layout_marginLeft="65dp"
+        android:layout_marginLeft="50dp"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/chooseFile"
@@ -34,7 +33,7 @@
         android:textAllCaps="false"
         android:text="Take a Picture"
         android:layout_marginTop="50dp"
-        android:layout_marginLeft="65dp"
+        android:layout_marginLeft="50dp"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/fileList"
@@ -46,7 +45,7 @@
         android:textAllCaps="false"
         android:text="Convert a File"
         android:layout_marginTop="50dp"
-        android:layout_marginLeft="65dp"
+        android:layout_marginLeft="50dp"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/resizePic"
