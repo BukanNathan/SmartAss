@@ -14,12 +14,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ConverterApp2">
+        <receiver
+            android:name=".MyAlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
 
-        <activity android:name=".NotificationActivity">
-        </activity>
+        <activity android:name=".NotificationActivity"></activity>
 
         <receiver android:name=".NotificationReceiver" />
-
         <receiver
             android:name=".ConnectionReceiver"
             android:enabled="true">

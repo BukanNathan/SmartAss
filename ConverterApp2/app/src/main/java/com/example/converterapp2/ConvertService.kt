@@ -14,7 +14,7 @@ class ConvertService : JobIntentService() {
         //perulangan untuk menjalankan progress bar
         do {
             Thread.sleep(1000)
-            convertProgress+=15
+            convertProgress+=20
             var intentFileConvert = Intent(ACTION_CONVERT)
             intentFileConvert.putExtra(EXTRA_PERSEN, convertProgress)
             intentFileConvert.putExtra(EXTRA_FINISH, false)
