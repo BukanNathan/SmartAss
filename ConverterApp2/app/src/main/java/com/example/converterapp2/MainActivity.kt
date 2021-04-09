@@ -26,5 +26,9 @@ class MainActivity : AppCompatActivity() {
             val intentConvert = Intent(this, ConvertFile::class.java)
             startActivity(intentConvert)
         }
+        link_convertion.setOnClickListener {
+            val intentlinkConvert = Intent(this, ConvertLink::class.java)
+            startActivity(intentlinkConvert)
+        }
     }
 }
