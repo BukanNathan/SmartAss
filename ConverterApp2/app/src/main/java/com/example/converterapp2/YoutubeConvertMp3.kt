@@ -11,7 +11,7 @@ import cz.msebera.android.httpclient.Header
 
 @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
 class YoutubeConvertMp3 : JobService() {
-    val appId = "lF-jPBnZ098"
+    val appId = "74c95aaa86msh7370fdb5d57f2a3p1b77a1jsnca3e839f2276"
     override fun onStopJob(params: JobParameters?): Boolean {
         Log.w("Job","Mulai")
         getYoutubeConvertMp3(params)
@@ -25,7 +25,7 @@ class YoutubeConvertMp3 : JobService() {
 
     private fun getYoutubeConvertMp3(jobParameters: JobParameters?) {
         var client = AsyncHttpClient()
-        var url = "https://coolguruji-youtube-to-mp3-download-v1.p.rapidapi.com/?id=lF-jPBnZ098"
+        var url = "https://coolguruji-youtube-to-mp3-download-v1.p.rapidapi.com/?id=https://www.youtube.com/watch?v=dQw4w9WgXcQ"
         val charSet = Charsets.UTF_8
         var handler = object : AsyncHttpResponseHandler(){
             override fun onSuccess(
