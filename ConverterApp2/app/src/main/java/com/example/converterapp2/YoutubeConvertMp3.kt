@@ -12,13 +12,13 @@ import cz.msebera.android.httpclient.Header
 @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
 class YoutubeConvertMp3 : JobService() {
     val appId = "74c95aaa86msh7370fdb5d57f2a3p1b77a1jsnca3e839f2276"
-    override fun onStopJob(params: JobParameters?): Boolean {
+    override fun onStartJob(params: JobParameters?): Boolean {
         Log.w("Job","Mulai")
         getYoutubeConvertMp3(params)
         return true
     }
 
-    override fun onStartJob(params: JobParameters?): Boolean {
+    override fun onStopJob(params: JobParameters?): Boolean {
         Log.w("Job","Berhenti")
         return true
     }
