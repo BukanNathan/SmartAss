@@ -13,11 +13,7 @@ import cz.msebera.android.httpclient.Header
 
 @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
 class YoutubeConvertMp3 : JobService() {
-<<<<<<< HEAD
-    val appId = "2384789d65mshae33ab975c0c87bp16d2ecjsn0ff6f1ec907e"
-=======
     val appId = "74c95aaa86msh7370fdb5d57f2a3p1b77a1jsnca3e839f2276"
->>>>>>> 7036a46370637c3ed221a623e9dff0068594da65
     override fun onStartJob(params: JobParameters?): Boolean {
         Log.w("Job","Mulai")
         getYoutubeConvertMp3(params)

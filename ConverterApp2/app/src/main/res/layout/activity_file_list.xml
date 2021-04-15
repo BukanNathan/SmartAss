@@ -34,6 +34,18 @@
         app:layout_constraintVertical_bias="0.068" />
 
     <View
+        android:id="@+id/button3"
+        android:layout_width="347dp"
+        android:layout_height="55dp"
+        android:background="#96FD9A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.068" />
+
+    <View
         android:id="@+id/view"
         android:layout_width="45dp"
         android:layout_height="37dp"
@@ -128,5 +140,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.052" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/contacts"
+        android:layout_width="345dp"
+        android:layout_height="wrap_content"
+        android:text="Get Contacts"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:background="@drawable/roundedshape2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.242"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.069" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

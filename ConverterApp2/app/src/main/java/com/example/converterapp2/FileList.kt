@@ -22,6 +22,10 @@ class FileList : AppCompatActivity(),ConnectionReceiver.ConnectionReceiverListen
 
         baseContext.registerReceiver(ConnectionReceiver(), IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION))
         MyApplication.instance.setConnectionListener(this)
+        contacts.setOnClickListener {
+            val intentDetails = Intent(this, ContactDetails::class.java)
+            startActivity(intentDetails)
+        }
     }
 
     override fun onNetworkConnectionChanged(isConnected: Boolean) {
