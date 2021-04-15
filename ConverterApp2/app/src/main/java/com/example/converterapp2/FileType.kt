@@ -52,13 +52,13 @@ class FileType : AppCompatActivity() {
     private fun displayNotification(){
         val notificationId = 45
         val tapResultIntent = Intent(this,FileTypeDetail::class.java)
-        val myPendingIntent = TaskStackBuilder.create(this)
+        val myPendingIntent: PendingIntent? = TaskStackBuilder.create(this)
                 .addNextIntentWithParentStack(tapResultIntent)
                 .getPendingIntent(100,PendingIntent.FLAG_UPDATE_CURRENT)
 
         //action button 1
         val intent2 = Intent(this,FileTypeDetail::class.java)
-        val pendingIntent2 = TaskStackBuilder.create(this)
+        val pendingIntent2: PendingIntent? = TaskStackBuilder.create(this)
                 .addNextIntentWithParentStack(intent2)
                 .getPendingIntent(0,PendingIntent.FLAG_UPDATE_CURRENT)
 
