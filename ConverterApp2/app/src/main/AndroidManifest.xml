@@ -60,6 +60,9 @@
         <activity
             android:name=".ResizePic"
             android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ConvertLink"
+            android:parentActivityName=".MainActivity" />
 
         <service
             android:name=".ConvertService"
