@@ -1,2 +1,0 @@
-include ':app'
-rootProject.name = "PetHub_Pembayaran_New"
