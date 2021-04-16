@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="30dp">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/chooseFile"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/roundedshape"
+        android:text="Choose File Type"
+        android:textAllCaps="false" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/fileList"
+        android:textAllCaps="false"
+        android:text="Transfer File"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chooseFile"
+        android:background="@drawable/roundedshape2"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/resizePic"
+        android:textAllCaps="false"
+        android:text="Take a Picture"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fileList"
+        android:background="@drawable/roundedshape3"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/convertion"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resizePic"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/roundedshape"
+        android:text="Convert a File"
+        android:textAllCaps="false" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/link_convertion"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/convertion"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="46dp"
+        android:background="@drawable/roundedshape2"
+        android:text="Convert Link"
+        android:textAllCaps="false" />
+
+</RelativeLayout>

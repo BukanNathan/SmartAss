@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity">
+
+    <LinearLayout
+        android:id="@+id/AppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg">
+        <ImageView
+            android:id="@+id/ImageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:background="@drawable/ic_home_foreground"
+            android:tint="#000000"
+            tools:ignore="VectorDrawableCompat"/>
+        <SearchView
+            android:id="@+id/SearchBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:queryHint="Search"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/AppBar"
+        android:background="@color/black" />
+    <TextView
+        android:id="@+id/txth1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:layout_below="@id/divider"
+        android:gravity="center_horizontal"
+        android:shadowColor="#7F000000"
+        android:shadowDx="3"
+        android:shadowDy="5"
+        android:shadowRadius="10"
+        android:text="Pet Shop"
+        android:textColor="@color/orange"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+    <ViewFlipper
+        android:id="@+id/carousel"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/txth1"
+        android:flipInterval="3000"
+        android:inAnimation="@anim/slide_out_right"
+        android:outAnimation="@anim/slide_in_left"
+        android:layout_centerInParent="true" >
+
+        <ImageView
+            android:src="@drawable/bowl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="Accessories"
+            android:layout_gravity="center_horizontal" />
+
+        <ImageView
+            android:src="@drawable/food"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="Pet Food"
+            android:layout_gravity="center_horizontal" />
+
+        <ImageView
+            android:src="@drawable/necklace"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="Pet Tag"
+            android:layout_gravity="center_horizontal" />
+    </ViewFlipper>
+    <TextView
+        android:id="@+id/txtsale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="40dp"
+        android:text="On Sale!"
+        android:layout_below="@id/carousel"
+        android:textColor="#FF0000"
+        android:textSize="25dp"
+        android:clickable="true"
+        android:textStyle="bold" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:clickable="true"
+        android:layout_below="@id/txtsale">
+        <Button
+            android:id="@+id/sale1"
+            android:layout_width="100dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="@color/white"/>
+        <Button
+            android:id="@+id/sale2"
+            android:layout_width="100dp"
+            android:layout_height="110dp"
+            android:layout_toRightOf="@id/sale1"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="30dp"
+            android:backgroundTint="@color/white"/>
+        <Button
+            android:id="@+id/sale3"
+            android:layout_width="120dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/sale2"
+            android:backgroundTint="@color/white"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/section2"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_below="@id/txtsale"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/bg3">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="@drawable/food"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            app:srcCompat="@drawable/necklace" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            app:srcCompat="@drawable/bowl" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txtpop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/section2"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="40dp"
+        android:text="Popular Now"
+        android:textColor="#FCAE1E"
+        android:textSize="25dp"
+        android:clickable="true"
+        android:textStyle="bold" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@id/txtpop">
+        <Button
+            android:id="@+id/pop1"
+            android:layout_width="100dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="@color/white"/>
+        <Button
+            android:id="@+id/pop2"
+            android:layout_width="100dp"
+            android:layout_height="110dp"
+            android:layout_toRightOf="@id/pop1"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="30dp"
+            android:backgroundTint="@color/white"/>
+        <Button
+            android:id="@+id/pop3"
+            android:layout_width="120dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/pop2"
+            android:backgroundTint="@color/white"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/section3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtpop"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:clickable="true"
+        android:background="@drawable/bg3">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="110dp"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:clickable="true"
+            app:srcCompat="@drawable/food" />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_margin="3dp"
+            android:clickable="true"
+            app:srcCompat="@drawable/necklace" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:clickable="true"
+            app:srcCompat="@drawable/bowl" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/section3"
+        android:background="@drawable/bg2"
+        />
+</RelativeLayout>
