@@ -36,8 +36,8 @@ class ResizePic : AppCompatActivity(), MyVPInterface {
                 editTextNumber.setError("Tidak boleh Kosong")
             }
             else{
-                var converPanjang = panjang.toDouble()
-                var converLebar = lebar.toDouble()
+                var converPanjang = panjang.toInt()
+                var converLebar = lebar.toInt()
                 presenter.hitungResize(converPanjang,converLebar,1166400)
             }
         }
