@@ -21,11 +21,26 @@ private const val EXTRA_STATUS = "EXTRA_STATUS"
 private const val EXTRA_STATUS2 = "EXTRA_STATUS2"
 private const val REQUEST_CODE = 30
 
-class ResizePic : AppCompatActivity() {
+class ResizePic : AppCompatActivity(), MyVPInterface {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_resize)
         actionBar?.setDisplayHomeAsUpEnabled(true)
+
+        var presenter = myPresenter(this)
+
+        button.setOnClickListener {
+            var panjang = editTextNumber.text.toString()
+            var lebar = editTextNumber2.text.toString()
+            if(panjang.isEmpty() || lebar.isEmpty()){
+                editTextNumber.setError("Tidak boleh Kosong")
+            }
+            else{
+                var converPanjang = panjang.toDouble()
+                var converLebar = lebar.toDouble()
+                presenter.hitungResize(converPanjang,converLebar,1166400)
+            }
+        }
 
         val addImg = findViewById<Button>(R.id.filter1);
         val addImg2 = findViewById<Button>(R.id.filter2);
@@ -128,5 +143,9 @@ class ResizePic : AppCompatActivity() {
         super.onRestoreInstanceState(savedInstanceState)
         textView6.text = savedInstanceState.getString(EXTRA_STATUS)
         textView7.text = savedInstanceState.getString(EXTRA_STATUS2)
+    }
+
+    override fun tampilkanSize(model: MyModel) {
+        result.text = model.resize.toString()
     }
 }
