@@ -15,6 +15,6 @@ class myPresenterTest {
     @Test
     fun hitungResize() {
         var resize = presenter.resize(1920,1920,1166400)
-        assertEquals(10,resize)
+        assertEquals(12,resize)
     }
 }
