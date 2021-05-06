@@ -42,7 +42,7 @@
         app:layout_constraintEnd_toStartOf="@+id/convert2"
         app:layout_constraintStart_toEndOf="@+id/convert1"
         app:layout_constraintTop_toBottomOf="@+id/convertionType"
-        app:layout_constraintVertical_bias="0.32" />
+        app:layout_constraintVertical_bias="0.315" />
 
     <Spinner
         android:id="@+id/convert2"

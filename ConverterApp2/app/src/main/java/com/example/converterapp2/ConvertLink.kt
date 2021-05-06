@@ -32,6 +32,7 @@ class ConvertLink : AppCompatActivity() {
         cancelLink.setOnClickListener {
             stopConvert()
         }
+<<<<<<< Updated upstream
 
         button4.setOnClickListener {
             if(soundID != 0){
@@ -74,6 +75,12 @@ class ConvertLink : AppCompatActivity() {
         super.onStop()
         sp?.release()
         sp = null
+=======
+        upper.setOnClickListener {
+            var text = linkEdit.text.toString()
+            linkEdit.setText(text.toUpperCase())
+        }
+>>>>>>> Stashed changes
     }
 
 
