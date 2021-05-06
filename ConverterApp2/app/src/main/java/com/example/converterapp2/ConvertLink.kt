@@ -4,12 +4,18 @@ import android.app.job.JobInfo
 import android.app.job.JobScheduler
 import android.content.ComponentName
 import android.content.Context
+import android.media.AudioManager
+import android.media.SoundPool
 import android.os.Build
+import android.os.Build.VERSION_CODES.LOLLIPOP
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import kotlinx.android.synthetic.main.activity_convert_link.*
+
+private var sp : SoundPool? = null
+private var soundID = 0
 
 @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
 
@@ -27,6 +33,47 @@ class ConvertLink : AppCompatActivity() {
             stopConvert()
         }
 
+        button4.setOnClickListener {
+            if(soundID != 0){
+                sp?.play(soundID,0.99f,.99f,1,0, .99f)
+            }
+        }
+
+    }
+
+    override fun onStart() {
+        super.onStart()
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+            CreateNewSoundPool()
+        }
+        else{
+            CreateOldSoundPool()
+        }
+        sp?.setOnLoadCompleteListener{soundPool, id, status ->
+            if(status != 0){
+                Toast.makeText(this,"Gagal Load",Toast.LENGTH_SHORT).show()
+            }
+            else{
+                Toast.makeText(this,"Berhasil Load",Toast.LENGTH_SHORT).show()
+            }
+        }
+        soundID = sp?.load(this, R.raw.nggyu, 1) ?: 0
+    }
+
+    private fun CreateOldSoundPool() {
+        sp = SoundPool(15,AudioManager.STREAM_MUSIC,0)
+    }
+
+    private fun CreateNewSoundPool() {
+        sp = SoundPool.Builder()
+                .setMaxStreams(15)
+                .build()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        sp?.release()
+        sp = null
     }
 
 
