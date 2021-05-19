@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".MyApplication"
@@ -15,7 +16,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ConverterApp2">
-        <activity android:name=".ContactDetails"></activity>
+        <activity android:name=".ExternalTextFile"></activity>
+
+        <service
+            android:name=".MyMPService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".ContactDetails" />
 
         <receiver
             android:name=".MyAlarmReceiver"

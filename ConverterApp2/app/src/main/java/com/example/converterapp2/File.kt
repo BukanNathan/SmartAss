@@ -4,5 +4,5 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class File(var Type: String = "Not Selected", var Extension: String = ".") : Parcelable {
+data class FileData(var Type: String, var Extension: String = ".") : Parcelable {
 }

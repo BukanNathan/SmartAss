@@ -10,6 +10,7 @@ import android.os.Build
 import android.os.Build.VERSION_CODES.LOLLIPOP
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import kotlinx.android.synthetic.main.activity_convert_link.*
@@ -19,8 +20,9 @@ private var soundID = 0
 
 @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
 
-class ConvertLink : AppCompatActivity() {
+class ConvertLink : AppCompatActivity(), View.OnClickListener {
     var jobSchedulerId = 10
+    private val PrefFileName = "MYFILEPREF01"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +34,6 @@ class ConvertLink : AppCompatActivity() {
         cancelLink.setOnClickListener {
             stopConvert()
         }
-<<<<<<< Updated upstream
 
         button4.setOnClickListener {
             if(soundID != 0){
@@ -40,6 +41,28 @@ class ConvertLink : AppCompatActivity() {
             }
         }
 
+        save.setOnClickListener(this)
+        delete.setOnClickListener(this)
+        read.setOnClickListener(this)
+    }
+
+    override fun onClick(v: View?) {
+        var mySharedPrefHelper = SharedPrefHelper (this, PrefFileName)
+        when(v?.id) {
+            R.id.save -> {
+                mySharedPrefHelper.link = linkEdit.text.toString()
+                Toast.makeText(this, "Link Tersimpan", Toast.LENGTH_SHORT).show()
+                clearEditText()
+            }
+            R.id.delete -> {
+                mySharedPrefHelper.clearValue()
+                clearEditText()
+            }
+            R.id.read -> linkEdit.setText(mySharedPrefHelper.link)
+        }
+    }
+    fun clearEditText() {
+        linkEdit.text.clear()
     }
 
     override fun onStart() {
@@ -75,12 +98,6 @@ class ConvertLink : AppCompatActivity() {
         super.onStop()
         sp?.release()
         sp = null
-=======
-        upper.setOnClickListener {
-            var text = linkEdit.text.toString()
-            linkEdit.setText(text.toUpperCase())
-        }
->>>>>>> Stashed changes
     }
 
 

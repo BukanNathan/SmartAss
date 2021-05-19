@@ -106,13 +106,6 @@ class Test1 {
         IdlingPolicies.setIdlingResourceTimeout(5, TimeUnit.SECONDS)
         onView(withId(R.id.result)).check(matches(withText("Convert .doc to .pdf")))
     }
-    @Test
-    fun testUpper() {
-        onView(withId(R.id.link_convertion)).perform(click())
-        onView(withId(R.id.linkEdit)).perform(typeText(" example"))
-        onView(withId(R.id.upper)).perform(click())
-        onView(withId(R.id.linkEdit)).check(matches(withText("LINK EXAMPLE")))
-    }
     @After
     fun tearDown(){
         Intents.release()

@@ -3,15 +3,12 @@ package com.example.converterapp2
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
-import android.content.ClipDescription
 import android.content.Context
 import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.MediaStore
 import android.widget.RadioButton
-import android.widget.RadioGroup
 import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationCompat.BADGE_ICON_SMALL
@@ -35,7 +32,7 @@ class FileType : AppCompatActivity() {
             var id: Int = radioGroup.checkedRadioButtonId
             if (id!=-1) {
                 val radio: RadioButton = findViewById(id)
-                var file = File (radio.text.toString(), editText1.text.toString())
+                var file = FileData (radio.text.toString(), editText1.text.toString())
                 intentFileType.putExtra(EXTRA_FILE, file)
                 startActivity(intentFileType)
             }
