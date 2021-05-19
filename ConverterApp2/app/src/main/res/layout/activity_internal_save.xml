@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InternalSave">
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="235dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="insert text here"
+        android:gravity="top"
+        android:textAllCaps="false" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="file name"
+        android:layout_below="@id/editText1"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/SavePdf"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Save to pdf"
+        android:layout_below="@id/editText2"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/SaveTxt"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Save to txt"
+        android:layout_toRightOf="@id/SavePdf"
+        android:layout_below="@id/editText2"
+        android:gravity="center" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="file name to read"
+        android:gravity="top"
+        android:layout_toRightOf="@id/readFile"
+        android:layout_below="@id/SavePdf"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/readFile"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Read File"
+        android:layout_below="@id/SavePdf"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/allFileName"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="All File Name"
+        android:layout_below="@id/readFile"
+        android:gravity="center" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/deleteAll"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="X"
+        android:layout_below="@id/allFileName"
+        android:gravity="center"
+        android:background="@drawable/roundedshape"/>
+
+</RelativeLayout>

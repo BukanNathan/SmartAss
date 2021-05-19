@@ -31,5 +31,9 @@ class MainActivity : AppCompatActivity() {
             val intentlinkConvert = Intent(this, ConvertLink::class.java)
             startActivity(intentlinkConvert)
         }
+        internalSave.setOnClickListener {
+            val intentInternalSave = Intent(this, InternalSave::class.java)
+            startActivity(intentInternalSave)
+        }
     }
 }
