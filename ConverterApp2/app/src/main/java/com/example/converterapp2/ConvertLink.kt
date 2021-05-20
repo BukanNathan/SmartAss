@@ -98,6 +98,10 @@ class ConvertLink : AppCompatActivity(), View.OnClickListener {
         super.onStop()
         sp?.release()
         sp = null
+        upper.setOnClickListener {
+            var text = linkEdit.text.toString()
+            linkEdit.setText(text.toUpperCase())
+        }
     }
 
 

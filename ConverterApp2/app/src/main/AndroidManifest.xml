@@ -16,12 +16,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ConverterApp2">
-        <activity android:name=".ExternalTextFile"></activity>
+        <activity android:name=".ExternalTextFile"/>
 
         <service
             android:name=".MyMPService"
             android:enabled="true"
             android:exported="true" />
+
+
+        <activity android:name=".InternalSave"/>
 
         <activity android:name=".ContactDetails" />
 
