@@ -38,6 +38,11 @@ class FileList : AppCompatActivity(),ConnectionReceiver.ConnectionReceiverListen
 
         play.setOnClickListener(this)
         pause.setOnClickListener(this)
+
+        roomDatabase.setOnClickListener {
+            val intentRoomDatabase = Intent(this,RoomDatabase::class.java)
+            startActivity(intentRoomDatabase)
+        }
     }
 
     override fun onClick(v: View?) {
