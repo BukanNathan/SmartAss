@@ -43,6 +43,11 @@ class FileList : AppCompatActivity(),ConnectionReceiver.ConnectionReceiverListen
             val intentRoomDatabase = Intent(this,RoomDatabase::class.java)
             startActivity(intentRoomDatabase)
         }
+
+        sqLiteDatabase.setOnClickListener {
+            val intentSqLiteDatabase = Intent(this, SqLiteMain::class.java)
+            startActivity(intentSqLiteDatabase)
+        }
     }
 
     override fun onClick(v: View?) {

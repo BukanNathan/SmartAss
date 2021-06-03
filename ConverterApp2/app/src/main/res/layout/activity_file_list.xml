@@ -210,4 +210,19 @@
         app:layout_constraintTop_toBottomOf="@+id/play"
         app:layout_constraintVertical_bias="0.249" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sqLiteDatabase"
+        android:layout_width="345dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundedshape"
+        android:text="SqLite Table"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.242"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roomDatabase"
+        app:layout_constraintVertical_bias="0.249" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

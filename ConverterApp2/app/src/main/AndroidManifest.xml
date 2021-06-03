@@ -16,7 +16,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ConverterApp2">
-        <activity android:name=".RoomDatabase"></activity>
+        <activity android:name=".PreLoad"></activity>
+        <activity android:name=".SqLiteMain" />
+        <activity android:name=".RoomDatabase" />
         <activity android:name=".ExternalTextFile" />
 
         <service
