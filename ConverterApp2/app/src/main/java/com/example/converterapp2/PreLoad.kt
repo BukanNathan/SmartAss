@@ -23,10 +23,32 @@ class PreLoad : AppCompatActivity() {
         setContentView(R.layout.activity_pre_load)
 
         btn_yes.setOnClickListener {
-            executeLoadData()
+            executeLoadDataTransaction()
         }
         btn_no.setOnClickListener {
             finishThisActivity()
+        }
+    }
+
+    private fun executeLoadDataTransaction() {
+        btn_no.isEnabled = false
+        btn_yes.isEnabled = false
+        myProgress.progress = 0
+        myProgress.max = mhs.size
+        mySqLitedb = SqLiteMyDBHelper(this)
+        doAsync {
+            mySqLitedb?.beginUserTransaction()
+            for(userData in mhs){
+                mySqLitedb?.addUserTransaction(userData)
+                uiThread {
+                    myProgress.progress += 1
+                }
+            }
+            mySqLitedb?.successUserTransaction()
+            mySqLitedb?.endUserTransaction()
+            uiThread {
+                finishThisActivity()
+            }
         }
     }
 

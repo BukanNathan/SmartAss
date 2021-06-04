@@ -73,4 +73,30 @@ class SqLiteMyDBHelper(context: Context) : SQLiteOpenHelper(
         var db = this.writableDatabase
         db.delete(SqLiteuserDB.userTable.TABLE_USER, null, null)
     }
+
+    fun beginUserTransaction(){
+        this.writableDatabase.beginTransaction()
+    }
+
+    fun successUserTransaction(){
+        this.writableDatabase.setTransactionSuccessful()
+    }
+
+    fun endUserTransaction(){
+        this.writableDatabase.endTransaction()
+    }
+
+    fun addUserTransaction(user: SqLiteUser){
+        var sqlString = "INSERT INTO ${SqLiteuserDB.userTable.TABLE_USER} " +
+                "(${SqLiteuserDB.userTable.COLUMN_ID}," +
+                "${SqLiteuserDB.userTable.COLUMN_NAME}," +
+                "${SqLiteuserDB.userTable.COLUMN_EMAIL}) VALUES (?,?,?)"
+        val myStatement = this.writableDatabase.compileStatement(sqlString)
+        myStatement.bindLong(1, user.id.toLong())
+        myStatement.bindString(2, user.nama)
+        myStatement.bindString(3, user.email)
+        myStatement.execute()
+        myStatement.clearBindings()
+
+    }
 }
