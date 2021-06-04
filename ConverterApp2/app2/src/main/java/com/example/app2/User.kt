@@ -1,10 +1,10 @@
-package com.example.converterapp2
+package com.example.app2
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-class SqLiteUser(
+data class SqLiteUser(
     var id: Int = 0,
     var nama: String = "",
     var email: String = "") : Parcelable {

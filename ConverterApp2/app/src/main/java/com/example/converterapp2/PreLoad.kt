@@ -9,14 +9,11 @@ import org.jetbrains.anko.uiThread
 class PreLoad : AppCompatActivity() {
     var mySqLitedb : SqLiteMyDBHelper? = null
     private var mhs = listOf(
-        SqLiteUser(),
-        SqLiteUser(),
-        SqLiteUser(),
-        SqLiteUser(),
-        SqLiteUser(),
-        SqLiteUser(),
-        SqLiteUser(),
-        SqLiteUser()
+        SqLiteUser(1,"A", "a@gmail.com"),
+        SqLiteUser(2,"B", "b@gmail.com"),
+        SqLiteUser(3,"C", "c@gmail.com"),
+        SqLiteUser(4,"D", "d@gmail.com"),
+        SqLiteUser(5,"E", "e@gmail.com")
     )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

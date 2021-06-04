@@ -17,8 +17,8 @@ class SqLiteMain : AppCompatActivity() {
         setContentView(R.layout.activity_sq_lite_main)
         mySQLitedb = SqLiteMyDBHelper(this)
         myFirstRunSharedPref = FirstRunSharedPref(this)
-//        mySQLitedb?.deleteAll()
-//        myFirstRunSharedPref?.firstRun = true
+        mySQLitedb?.deleteAll()
+        myFirstRunSharedPref?.firstRun = true
         if (myFirstRunSharedPref!!.firstRun){
             var secondIntent = Intent(this,PreLoad::class.java)
             startActivity(secondIntent)
@@ -26,7 +26,7 @@ class SqLiteMain : AppCompatActivity() {
 
         updateAdapter()
         btn_add.setOnClickListener {
-            var userTmp = SqLiteUser()
+            var userTmp = SqLiteUser(1)
             userTmp.nama = edit_text_name.text.toString()
             userTmp.email = edit_text_email.text.toString()
             var result = mySQLitedb?.adduser(userTmp)
