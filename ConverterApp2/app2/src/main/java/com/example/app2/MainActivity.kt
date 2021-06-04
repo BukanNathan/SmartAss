@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         var tmp = userTransaction(this)
         var result = ""
         for (str in tmp.viewAllName()) {
-            result += str
+            result += str + System.getProperty("line.separator")
         }
         text1.text = result
     }

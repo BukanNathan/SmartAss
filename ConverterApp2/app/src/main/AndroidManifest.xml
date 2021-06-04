@@ -85,7 +85,7 @@
             android:name=".ConvertLink"
             android:parentActivityName=".MainActivity" />
         <provider
-            android:authorities="com.example.converterapp2.provider.provider.myContentProvider"
+            android:authorities="com.example.converterapp2.provider.myContentProvider"
             android:name=".provider.myContentProvider"
             android:enabled="true"
             android:exported="true"

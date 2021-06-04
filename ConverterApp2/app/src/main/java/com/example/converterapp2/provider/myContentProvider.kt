@@ -51,7 +51,7 @@ class myContentProvider : ContentProvider() {
         TODO("Not yet implemented")
     }
     companion object {
-        val AUTHORITY = "com.example.converterapp2.provider.provider.myContentProvider"
+        val AUTHORITY = "com.example.converterapp2.provider.myContentProvider"
         val USER_TABLE = SqLiteuserDB.userTable.TABLE_USER
         val CONTENT_URI = Uri.parse("content://$AUTHORITY/$USER_TABLE")
     }
