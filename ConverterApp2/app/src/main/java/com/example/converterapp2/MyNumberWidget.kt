@@ -66,7 +66,8 @@ class MyNumberWidget : AppWidgetProvider() {
             appWidgetManager.updateAppWidget(appWidgetId, views)
         }
 
-        private fun getPendingSelfIntent(context: Context, StringOnClick: String): PendingIntent? = Intent(context, MyNumberWidget::class.java).let {
+        private fun getPendingSelfIntent(context: Context, StringOnClick: String): PendingIntent? = Intent(
+                context, MyNumberWidget::class.java).let {
             it.action = StringOnClick
             PendingIntent.getBroadcast(context, 101, it, PendingIntent.FLAG_UPDATE_CURRENT)
         }
