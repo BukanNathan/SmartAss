@@ -2,10 +2,10 @@ package com.example.converterapp2
 
 class saveMessage() {
     private var lstMessage = arrayListOf(
-        "Hello",
-        "Have a nice Day",
-        "Sunny Day",
-        "Remember to be Happy"
+        "Files Converted : 0 file(s)",
+        "Use Converter App",
+        "Files Converting . . .",
+        "Add Files to Convert"
     )
     private var index = -1
     fun addMessage(str : String){
