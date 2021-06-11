@@ -40,15 +40,15 @@ class MainActivity : AppCompatActivity() {
             startActivity(intentInternalSave)
         }
 
-/** Widget */
-//        var alarmIntent = Intent(this, MyMessage::class.java).let {
-//            it.action = MyMessage.ACTION_AUTO_UPDATE
-//            PendingIntent.getBroadcast(this, 101, it, PendingIntent.FLAG_UPDATE_CURRENT)
-//        }
-//        var cal = Calendar.getInstance()
-//        cal.add(Calendar.MINUTE, 1)
-//
-//        var alarmManager = this.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-//        alarmManager.setRepeating(AlarmManager.RTC, cal.timeInMillis, 60000L, alarmIntent)
+/** Untuk memastikan alarm manager berjalan */
+        var alarmIntent = Intent(this, MyMessage::class.java).let {
+            it.action = MyMessage.ACTION_AUTO_UPDATE
+            PendingIntent.getBroadcast(this, 101, it, PendingIntent.FLAG_UPDATE_CURRENT)
+        }
+        var cal = Calendar.getInstance()
+        cal.add(Calendar.MINUTE, 1)
+
+        var alarmManager = this.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        alarmManager.setRepeating(AlarmManager.RTC, cal.timeInMillis, 60000L, alarmIntent)
     }
 }
