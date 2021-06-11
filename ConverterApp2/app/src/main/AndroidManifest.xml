@@ -8,7 +8,8 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-    <permission android:name="com.example.converterapp2.provider.READ_URI_DB"
+    <permission
+        android:name="com.example.converterapp2.provider.READ_URI_DB"
         android:protectionLevel="normal" />
 
     <application
@@ -19,7 +20,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ConverterApp2">
-        <activity android:name=".PreLoad"></activity>
+        <receiver android:name=".MyMessage">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.appwidget.action.APPWIDGET_DISABLED" />
+                <action android:name="android.appwidget.action.APPWIDGET_ENABLED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/my_message_info" />
+        </receiver>
+
+        <activity android:name=".PreLoad" />
         <activity android:name=".SqLiteMain" />
         <activity android:name=".RoomDatabase" />
         <activity android:name=".ExternalTextFile" />
@@ -84,13 +97,18 @@
         <activity
             android:name=".ConvertLink"
             android:parentActivityName=".MainActivity" />
+
         <provider
+<<<<<<< HEAD
             android:authorities="com.example.converterapp2.provider.myContentProvider"
+=======
+>>>>>>> 9dd760e4ea0a02fe42bc2f058e4489c5c0bd1a44
             android:name=".provider.myContentProvider"
+            android:authorities="com.example.converterapp2.provider.provider.myContentProvider"
             android:enabled="true"
             android:exported="true"
-            android:readPermission="com.example.converterapp2.provider.READ_URI_DB"
-            android:grantUriPermissions="true" />
+            android:grantUriPermissions="true"
+            android:readPermission="com.example.converterapp2.provider.READ_URI_DB" />
 
         <service
             android:name=".ConvertService"
