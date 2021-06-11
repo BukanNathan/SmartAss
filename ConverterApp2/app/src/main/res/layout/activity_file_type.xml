@@ -73,40 +73,52 @@
         android:id="@+id/text2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:textColor="@color/black"
-        android:text="File Extension"
-        android:layout_marginLeft="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="50dp"
         android:layout_below="@+id/radioGroup"
-        />
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:text="File Extension"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
 
     <EditText
         android:id="@+id/editText1"
-        android:text="."
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/radioGroup"
-        android:layout_toRightOf="@+id/text2"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="22dp"
         android:layout_toEndOf="@id/text2"
-        android:layout_marginTop="40dp"
+        android:layout_toRightOf="@+id/text2"
         android:backgroundTint="@color/black"
-        android:layout_marginLeft="10dp"
-        android:layout_marginStart="10dp"
-        android:maxLines="1"
         android:lines="1"
+        android:maxLines="1"
         android:singleLine="true"
-        />
+        android:text="." />
 
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/text2"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="39dp"
         android:text="Continue" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/widgetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Number of Files"
+        android:textAllCaps="false"
+        android:background="@drawable/roundedshape"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="39dp"
+        android:layout_toRightOf="@id/button1"
+        android:layout_below="@id/text2"
+        android:padding="10dp" />
 </RelativeLayout>

@@ -20,6 +20,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ConverterApp2">
+        <receiver android:name=".MyNumberWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.appwidget.action.APPWIDGET_ENABLED" />
+                <action android:name="android.appwidget.action.APPWIDGET_DISABLED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/my_number_widget_info" />
+        </receiver>
+
+        <activity android:name=".WidgetActivity" />
+
         <receiver android:name=".MyMessage">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -99,10 +113,6 @@
             android:parentActivityName=".MainActivity" />
 
         <provider
-<<<<<<< HEAD
-            android:authorities="com.example.converterapp2.provider.myContentProvider"
-=======
->>>>>>> 9dd760e4ea0a02fe42bc2f058e4489c5c0bd1a44
             android:name=".provider.myContentProvider"
             android:authorities="com.example.converterapp2.provider.provider.myContentProvider"
             android:enabled="true"

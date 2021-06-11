@@ -44,6 +44,11 @@ class FileType : AppCompatActivity() {
             createNotificationChannel(channelID,"Demo Channel","This is a demo")
             displayNotification()
         }
+
+        widgetButton.setOnClickListener {
+            val intentWidgetActivity = Intent(this, WidgetActivity::class.java)
+            startActivity(intentWidgetActivity)
+        }
     }
 
     private fun displayNotification(){
