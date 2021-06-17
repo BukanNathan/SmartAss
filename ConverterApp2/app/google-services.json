@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "801375458889",
+    "project_id": "convertappfirebase",
+    "storage_bucket": "convertappfirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801375458889:android:b30b4330e35d243ccc5198",
+        "android_client_info": {
+          "package_name": "com.example.converterapp2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "801375458889-lioev381e7q6trvhm9vd2lkk1a5pbhk1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLURLRaaYs2UTvLK5jYW3WymXPuKVFTLA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "801375458889-lioev381e7q6trvhm9vd2lkk1a5pbhk1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
