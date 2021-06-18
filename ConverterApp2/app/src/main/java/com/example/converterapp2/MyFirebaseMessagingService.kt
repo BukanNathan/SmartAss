@@ -19,17 +19,17 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
     }
 
     private fun showNotify(title:String?, message: String?){
-        var notifManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        var myNotifyManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
             val notifChannel = NotificationChannel("notif1", "Notification", NotificationManager.IMPORTANCE_DEFAULT)
             notifChannel.description = "FCM Channel 1"
             notifChannel.enableLights(true)
             notifChannel.lightColor = Color.RED
-            notifManager.createNotificationChannel(notifChannel)
+            myNotifyManager.createNotificationChannel(notifChannel)
         }
 
-        var notifyNotif = NotificationCompat.Builder(this, "notif").apply {
+        var myNotify = NotificationCompat.Builder(this, "notif").apply {
             setDefaults(Notification.DEFAULT_ALL)
             setWhen(System.currentTimeMillis())
             setSmallIcon(R.mipmap.ic_launcher)
@@ -37,6 +37,6 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
             setContentText(message)
             setContentInfo("information")
         }
-        notifManager.notify(1,notifyNotif.build())
+        myNotifyManager.notify(1,myNotify.build())
     }
 }
