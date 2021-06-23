@@ -131,6 +131,9 @@
             android:enabled="true"
             android:exported="true"
             android:permission="android.permission.BIND_JOB_SERVICE" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-4436038698343413~6275609368" />
         <service
             android:name=".MyFirebaseMessagingService">
             <intent-filter>
